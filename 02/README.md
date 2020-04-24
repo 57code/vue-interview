@@ -32,11 +32,11 @@
 
 上面案例重现的是以下过程
 
-![img1](/assets/v2-6e88cc53a7e427f0ae8340cf930ac30d_hd.jpg)
+![img1](../assets/v2-6e88cc53a7e427f0ae8340cf930ac30d_hd.jpg)
 
 不使用key
 
-![img2](/assets/v2-bf76311258f100b789226ccbb2600071_hd.jpg)
+![img2](../assets/v2-bf76311258f100b789226ccbb2600071_hd.jpg)
 
 如果使用key
 
