@@ -2,7 +2,7 @@
 
 分析：此题考查实践能力，能说出用法只能60分。更重要的是对vuex设计理念和实现原理的解读。
 
-![vuex](/assets/vuex.png)
+![vuex](../assets/vuex.png)
 
 回答策略：3w1h
 
