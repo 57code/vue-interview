@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>03-key的作用及原理?</title>
+</head>
+
+<body>
+    <div id="demo">
+        <p v-for="item in items" :key="item">{{item}}</p>
+    </div>
+    <script src="../dist/vue.js"></script>
+    <script>
+        // 创建实例
+        const app = new Vue({
+            el: '#demo',
+            data: { items: ['a', 'b', 'c', 'd', 'e'] },
+            mounted () {
+                setTimeout(() => {
+                    this.items.splice(2, 0, 'f')
+                }, 2000);
+            },
+        });
+    </script>
+</body>
+
+</html>

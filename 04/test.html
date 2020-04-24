@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue源码剖析</title>
+    <script src="../dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="demo">
+        <h1>虚拟DOM</h1>
+        <p>{{foo}}</p>
+    </div>
+    <script>
+        // 创建实例
+        const app = new Vue({
+            el: '#demo',
+            data: { foo: 'foo' },
+            mounted() {
+                setTimeout(() => {
+                    this.foo = 'fooooo'
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>
