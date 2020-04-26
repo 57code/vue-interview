@@ -9,13 +9,103 @@
 
 <body>
   <div id="app">
-    <!-- todo -->
-    todo
+    <!-- 1.父子：props, $emit/$on -->
+    <Child1 msg="content from parent" @dosomething="onMsg"></Child1>
+
+    <!-- 2.兄弟: $parent -->
+    <Child2></Child2>
+
+    <!-- 3.无直接关系：$root, provide/inject, $attrs/$listeners, eventbus, vuex -->
+    <Child3 @click="handlerInAncestor"></Child3>
   </div>
+
   <script src="../dist/vue.js"></script>
+  <script type="text/x-template" id="child1">
+    <div>
+      <h3 @click="$emit('dosomething', 'msg from child1')">child1</h3>
+      <p>{{msg}}</p>
+      <p><button @click="sayHi">hi bro</button></p>
+    </div>
+  </script>
+  <script type="text/x-template" id="child2">
+    <div>
+      <h3>child2</h3>
+      <p>监听来自child1的信息</p>
+      <p><button @click="sayHi">hi nephew</button></p>
+    </div>
+  </script>
+  <script type="text/x-template" id="child3">
+    <div>
+      <h3>child3</h3>
+      <Grandson1 v-on="$listeners"></Grandson1>
+    </div>
+  </script>
+  <script type="text/x-template" id="grandson1">
+    <div>
+      <h3 @click="$emit('click')">grandson1</h3>
+      <p>{{msgFromAncestor}}</p>
+    </div>
+  </script>
   <script>
+
+    Vue.component('Child1', {
+      template: '#child1',
+      props: {
+        msg: {
+          type: String,
+          default: ''
+        },
+      },
+      methods: {
+        sayHi() {
+          this.$parent.$emit('hi', 'msg from child1')
+        }
+      },
+    })
+
+    Vue.component('Child2', {
+      template: '#child2',
+      mounted () {
+        this.$parent.$on('hi', this.onMsgFromBro);
+      },
+      methods: {
+        onMsgFromBro(msg) {
+          console.log(msg);
+        },
+        sayHi() {
+          this.$root.$emit('msgFromAnyWhere', 'msg from uncle')
+        }
+      },
+    })
+
+    Vue.component('Child3', {
+      template: '#child3'
+    })
+    Vue.component('Grandson1', {
+      template: '#grandson1',
+      inject: {'msgFromAncestor': 'msg'},
+      mounted () {
+        this.$root.$on('msgFromAnyWhere', msg => {
+          console.log(msg);
+        });
+      },
+    })
+
     const app = new Vue({
       el: '#app',
+      provide(){
+        return {
+          msg: 'msg from root'
+        }
+      },
+      methods: {
+        onMsg(msg) {
+          alert(msg)
+        },
+        handlerInAncestor() {
+          console.log('这个事件处理是在root中定义的');
+        }
+      },
     })
   </script>
 </body>
