@@ -1,0 +1,20 @@
+{
+  "name": "vue-interview",
+  "version": "0.0.1",
+  "description": "总结面试中经典的vue相关题目，分析最佳回答策略，欢迎star，你的支持是我最大的动力",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/57code/vue-interview.git"
+  },
+  "keywords": ["vue", "interview"],
+  "author": "57code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/57code/vue-interview/issues"
+  },
+  "homepage": "https://57code.github.io/vue-interview"
+}
