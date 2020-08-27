@@ -15,7 +15,9 @@
 9. [你知道nextTick吗，它是干什么的，实现原理是什么？](public/09/README.md)
 10. [说一说你对vue响应式理解？](public/10/README.md)
 11. [你如果想要扩展某个Vue组件时会怎么做？](public/11/README.md)
+12. [nextTick实现原理](public/12/README.md)
+13. [Vue2和Vue3中的响应式原理对比，分别的具体实现思路](public/13/README.md)
 
 
-欢迎把你想听的题目以issue的方式提给我
-觉得好就star，你的支持是我最好的动力~
+### 欢迎把你想听的题目以issue的方式提给我
+### 觉得好就star，你的支持是我最好的动力~

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="example">{{message}}</div>
+
+  <script src="../dist/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#example',
+      data: {
+        message: '123'
+      }
+    })
+    vm.message = 'new message' // 更改数据
+    vm.$el.textContent === 'new message' // false
+    Vue.nextTick(function () {
+      vm.$el.textContent === 'new message' // true
+    })  
+  </script>
+</body>
+
+</html>
