@@ -19,10 +19,10 @@
 
 
 ### 没有你想看的题目？
-欢迎把你想听的题目以(issue)[https://github.com/57code/vue-interview/issues]的方式提给我，我会尽快更新
+欢迎把你想听的题目以[issue](https://github.com/57code/vue-interview/issues)的方式提给我，我会尽快更新
 
 ### 欢迎Star
 觉得还不错就给个star，你的支持是我最大的动力，赐予我力量吧！
 
 ### 不喜欢看文字？
-来(我的B站主页)[https://space.bilibili.com/480140591]看视频学习，当然不要忘了三连啊~
+来[我的B站主页](https://space.bilibili.com/480140591)看视频学习，当然不要忘了三连啊~
