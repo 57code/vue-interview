@@ -1,0 +1,29 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <router-link to="/a">a</router-link> | 
+  <router-link to="/b">b</router-link>
+  <router-view></router-view>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://unpkg.com/vue-router@4"></script>
+<script>
+  const { createApp } = Vue
+  const { createRouter, createWebHashHistory } = VueRouter
+  const router = createRouter({
+    history: createWebHashHistory('/'),
+    routes: [
+      { path: '/', redirect: '/a' },
+      { path: '/a', component: { template: '<div>CompA</div>' }},
+      { path: '/b', component: { template: '<div>CompB</div>' }},
+    ]
+  })
+  createApp({
+    data() {
+      return {
+        title: '从零写vue路由'
+      }
+    },
+  })
+  .use(router)
+  .mount('#app')
+</script>

@@ -1,0 +1,16 @@
+<div id="demo">
+    <h1>diff</h1>
+    <p>{{foo}}</p>
+</div>
+<script src="http://unpkg.com/vue@3"></script>
+<script>
+    // 创建实例
+    const app = Vue.createApp({
+        data: () => ({ foo: 'foo' }),
+        mounted() {
+            setTimeout(() => {
+                this.foo = 'fooooo'
+            }, 1000);
+        }
+    }).mount('#demo')
+</script>

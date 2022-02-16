@@ -1,0 +1,41 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <p>vue3取消了$on,$children,$listeners</p>
+  <child ref="child" foo="foo" @another-event="onAnotherEvent"></child>
+</div>
+<script src="https://unpkg.com/vue@3.2"></script>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        title: '组件通信'
+      }
+    },
+    mounted() {
+      // 这里不能使用$children
+      console.log(this.$children) // undefined
+      console.log(this.$refs.child)
+      // 这里不能使用$on
+      // this.$refs.child.$on('some-event', () => {
+      //   console.log('some-event!!!');
+      // })
+    },
+    methods: {
+      onAnotherEvent() {}
+    },
+  })
+    .component('child', {
+      template: '<div @click="onclick">child</div>',
+      mounted() {
+        // 这里包含事件回调
+        console.log('$attrs', this.$attrs)
+      },
+      methods: {
+        onclick() {
+          this.$emit('some-event')
+        }
+      },
+    })
+    .mount('#app')
+</script>

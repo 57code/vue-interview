@@ -1,0 +1,19 @@
+<h1>03-key的作用及原理?</h1>
+
+<div id="demo">
+    <p v-for="item in items" :key="item">{{item}}</p>
+</div>
+<script src="http://unpkg.com/vue@3"></script>
+<script>
+    // 创建实例
+    const app = Vue.createApp({
+        data() {
+            return { items: ['a', 'b', 'c', 'd', 'e'] }
+        },
+        mounted() {
+            setTimeout(() => {
+                this.items.splice(2, 0, 'f')
+            }, 2000);
+        },
+    }).mount('#demo')
+</script>

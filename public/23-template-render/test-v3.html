@@ -1,0 +1,19 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <p>观察渲染函数</p>
+  <pre style="border: 1px solid black;
+  background-color: #ffffda;">{{renderFunc}}</pre>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+  const { createApp } = Vue
+  const app = createApp({
+    data() {
+      return {
+        title: '说说从template到render的处理过程',
+        renderFunc: ''
+      }
+    },
+  }).mount('#app')
+  app.renderFunc = app.$options.render
+</script>

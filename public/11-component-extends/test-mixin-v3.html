@@ -1,0 +1,26 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <comp></comp>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        title: 'mixin原理'
+      }
+    },
+  })
+  .mixin({
+    data() {
+      return {
+        foo: 'foo~'
+      }
+    },
+  })
+  .component('comp', {
+    template:'<div>{{foo}}</div>',
+  })
+  .mount('#app')
+</script>

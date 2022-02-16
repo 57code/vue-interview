@@ -8,7 +8,7 @@
 
 按照逻辑扩展和内容扩展来列举，逻辑扩展有：mixins、extends、composition api；内容扩展有slots；
 
-分别说出他们使用使用方法、场景差异和问题。
+分别说出他们使用方法、场景差异和问题。
 
 作为扩展，还可以说说vue3中新引入的composition api带来的变化
 

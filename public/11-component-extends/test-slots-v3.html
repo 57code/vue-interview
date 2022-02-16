@@ -1,0 +1,19 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <comp>abc</comp>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        title: 'slots原理'
+      }
+    },
+  })
+  .component('comp', {
+    template:'<div><slot /></div>',
+  })
+  .mount('#app')
+</script>

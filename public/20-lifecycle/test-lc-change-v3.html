@@ -1,0 +1,37 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <error-boundary>
+    <comp></comp>
+  </error-boundary>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp, h } = Vue
+  createApp({
+    data() {
+      return {
+        title: 'vue3生命周期钩子的变化'
+      }
+    }
+  })
+    .component('ErrorBoundary', {
+      data: () => ({ error: null }),
+      errorCaptured(err, vm, info) {
+        this.error = `${err.stack}\n\nfound in ${info} of component`
+        return false
+      },
+      render() {
+        if (this.error) {
+          return h('pre', { style: { color: 'red' } }, this.error)
+        }
+        return this.$slots.default()
+      }
+    })
+    .component('comp', {
+      template: '<div>comp</div>',
+      mounted() {
+        console.log(a);
+      },
+    })
+    .mount('#app')
+</script>

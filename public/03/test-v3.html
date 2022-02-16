@@ -6,16 +6,15 @@
     <option value="react">react</option>
   </select>
 </div>
-<script src="../dist/vue.js"></script>
+<script src="http://unpkg.com/vue@3"></script>
 <script>
   // 创建实例
-  const app = new Vue({
-    el: '#demo',
-    data: {
+  const app = Vue.createApp({
+    data: () => ({
       foo: 'foo',
       bar: true,
       baz: 'react'
-    }
-  });
+    })
+  }).mount('#demo')
   console.log(app.$options.render);
 </script>

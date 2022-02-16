@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 过滤列表中项目 -->
+    <div v-for="item in items" :key="item.id" v-if="item.isActive">
+      {{ item.name }}
+    </div>
+  </div>
+  <script src="http://unpkg.com/vue@3"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          items: [
+            { id: 1, name: '张三', isActive: true },
+            { id: 2, name: '李四', isActive: false }
+          ]
+        }
+      },
+    }).mount('#app')
+    console.log(app.$options.render);   
+  </script>
+</body>
+
+</html>

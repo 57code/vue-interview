@@ -27,4 +27,14 @@
 5. 为了解决这些问题，vue3重新编写了这一部分的实现：利用ES6的Proxy机制代理要响应化的数据，它有很多好处，编程体验是一致的，不需要使用特殊api，初始化性能和内存消耗都得到了大幅改善；另外由于响应化的实现代码抽取为独立的reactivity包，使得我们可以更灵活的使用它，我们甚至不需要引入vue都可以体验。
 
 
+### 知其所以然
 
+vue2响应式：
+
+https://github1s.com/vuejs/vue/blob/HEAD/src/core/observer/index.js#L135-L136
+
+vue3响应式：
+
+https://github1s.com/vuejs/core/blob/HEAD/packages/reactivity/src/reactive.ts#L89-L90
+
+https://github1s.com/vuejs/core/blob/HEAD/packages/reactivity/src/ref.ts#L67-L68

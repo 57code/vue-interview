@@ -1,0 +1,15 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp } = Vue
+  const app = createApp({
+    data() {
+      return {
+        title: 'render函数'
+      }
+    },
+  }).mount('#app')
+  console.log(app.$options.render);
+</script>

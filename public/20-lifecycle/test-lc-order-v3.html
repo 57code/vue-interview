@@ -1,0 +1,26 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp, h } = Vue
+  createApp({
+    data() {
+      return {
+        title: 'setup和created执行顺序',
+      }
+    },
+    created() {
+      console.log('created');
+    },
+    setup() {
+      console.log('setup');
+      return {
+        data: Vue.reactive({
+          title: 'aaa'
+        })
+      }
+    }
+  })
+    .mount('#app')
+</script>

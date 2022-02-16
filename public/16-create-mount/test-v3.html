@@ -1,0 +1,37 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <parent></parent>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        title: '父组件和子组件创建和挂载顺序'
+      }
+    },
+    components: {
+      parent: {
+        template: '<div>parent: <child /></div>',
+        created() {
+          console.log('parent created');
+        },
+        mounted() {
+          console.log('parent mounted');
+        },
+        components: {
+          child: {
+            template: '<div>child</div>',
+            created() {
+              console.log('child created');
+            },
+            mounted() {
+              console.log('child mounted');
+            },
+          }
+        }
+      }
+    }
+  }).mount('#app')
+</script>

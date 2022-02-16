@@ -1,0 +1,30 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <p>{{ reverseTitle }}</p>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        title: 'title'
+      }
+    },
+    computed: {
+      reverseTitle() {
+        return this.title.split('').reverse().join('')
+      }
+    },
+    watch: {
+      title() {
+        console.log('title change');
+      }
+    },
+    mounted() {
+      setTimeout(() => {
+        this.title = this.title.split('').reverse().join('')
+      }, 1000)
+    },
+  }).mount('#app')
+</script>

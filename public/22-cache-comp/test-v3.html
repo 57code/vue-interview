@@ -1,0 +1,47 @@
+<div id="app">
+  <h1>{{ title }}</h1>
+  <label><input type="radio" v-model="current" value="CompA" /> A</label>
+  <label><input type="radio" v-model="current" value="CompB" /> B</label>
+  <keep-alive include="CompA">
+    <component :is="current"></component>
+  </keep-alive>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        title: '缓存组件',
+        current: 'CompA'
+      }
+    },
+    components: {
+      CompA: {
+        name: 'CompA',
+        data() {
+          return {
+            count: 0
+          }
+        },
+        template: `  
+          <p>Current component: A</p>
+          <span>count: {{ count }}</span>
+          <button @click="count++">+</button>`
+      },
+      CompB: {
+        name: 'CompB',
+        data() {
+          return {
+            msg: ''
+          }
+        },
+        template: `
+          <p>Current component: B</p>
+          <span>Message is: {{ msg }}</span>
+          <input v-model="msg">
+        `
+      }
+    },
+  }).mount('#app')
+</script>
