@@ -1,5 +1,5 @@
 <div id="demo">
-  <input type="text" v-model="foo">
+  <input type="text" v-model="foo" >
   <input type="checkbox" v-model="bar">
   <select v-model="baz">
     <option value="vue">vue</option>
@@ -15,6 +15,7 @@
       bar: true,
       baz: 'react'
     })
-  }).mount('#demo')
+  })
+  .mount('#demo')
   console.log(app.$options.render);
 </script>

@@ -1,0 +1,25 @@
+<div id="app">
+  <h1 ref="h1">{{ title }}</h1>
+</div>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { createApp, nextTick } = Vue
+  createApp({
+    data() {
+      return {
+        title: 'nextTick'
+      }
+    },
+    mounted() {
+      setTimeout(() => {
+        this.title = 'abc'
+      }, 1000)
+
+      this.$refs.h1.innerText // 'nextTick'
+      nextTick(() => {
+        debugger
+        this.$refs.h1.innerText // 'abc'
+      })
+    }
+  }).mount('#app')
+</script>
