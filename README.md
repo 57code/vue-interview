@@ -7,7 +7,7 @@
 
 ## 视频讲解
 关注村长B站账号观看视频讲解
-<img src="https://gitee.com/57code/picgo/raw/master/image-20220210163623232.png" style="zoom:50%;" />
+[【Vue面试专题】金三银四必备！56道经典Vue面试题详解](https://www.bilibili.com/video/BV11i4y1Q7H2/)
 
 ## 目录
 1. [v-if和v-for哪个优先级更高？](public/01-vif-vfor/README.md)
