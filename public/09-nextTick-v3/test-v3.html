@@ -11,13 +11,9 @@
       }
     },
     mounted() {
-      setTimeout(() => {
-        this.title = 'abc'
-      }, 1000)
-
+      this.title = 'abc'
       this.$refs.h1.innerText // 'nextTick'
       nextTick(() => {
-        debugger
         this.$refs.h1.innerText // 'abc'
       })
     }

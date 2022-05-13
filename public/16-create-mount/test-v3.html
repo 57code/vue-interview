@@ -13,6 +13,7 @@
     },
     components: {
       parent: {
+        name: 'parent',
         template: '<div>parent: <child /></div>',
         created() {
           console.log('parent created');
@@ -22,6 +23,7 @@
         },
         components: {
           child: {
+            name: 'child',
             template: '<div>child</div>',
             created() {
               console.log('child created');
