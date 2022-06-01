@@ -1,10 +1,11 @@
 ## v-if和v-for哪个优先级更高？
 
-分析：此题考查常识，文档中曾有详细说明[v2](https://cn.vuejs.org/v2/style-guide/#%E9%81%BF%E5%85%8D-v-if-%E5%92%8C-v-for-%E7%94%A8%E5%9C%A8%E4%B8%80%E8%B5%B7%E5%BF%85%E8%A6%81)|[v3](https://vuejs.org/style-guide/rules-essential.html#avoid-v-if-with-v-for)；也是一个很好的实践题目，项目中经常会遇到，能够看出面试者应用能力。
+### 分析：
+此题考查常识，文档中曾有详细说明[v2](https://cn.vuejs.org/v2/style-guide/#%E9%81%BF%E5%85%8D-v-if-%E5%92%8C-v-for-%E7%94%A8%E5%9C%A8%E4%B8%80%E8%B5%B7%E5%BF%85%E8%A6%81)|[v3](https://vuejs.org/style-guide/rules-essential.html#avoid-v-if-with-v-for)；也是一个很好的实践题目，项目中经常会遇到，能够看出面试者应用能力。
 
 
 
-思路分析：总分总模式
+### 思路分析：总分总模式
 
 1. 先给出结论
 2. 为什么是这样的
@@ -12,11 +13,7 @@
 4. 如果不能，那应该怎样
 5. 总结
 
-
-
-
-
-回答范例：
+### 回答范例：
 
 1. 在 `Vue 2` 中，`v-for` 优先于 `v-if` 被解析；但在 `Vue 3` 中，则完全相反，`v-if` 的优先级高于 `v-for`。
 
@@ -35,10 +32,7 @@
 6. 看过源码里面关于代码生成的部分，
 
 
-
-
-
-知其所以然：
+### 知其所以然：
 
 在 `Vue 2` 中做个测试，[test.html](./test.html)
 两者同级时，渲染函数如下：
