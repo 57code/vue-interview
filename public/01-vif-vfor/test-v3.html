@@ -8,9 +8,17 @@
 </head>
 
 <body>
-  <div id="app">
-    <!-- 过滤列表中项目 -->
+  <!-- 过滤列表中项目 -->
+  <!-- 浏览器控制台会报错：Uncaught TypeError: Cannot read properties of undefined (reading 'isActive') -->
+  <!-- <div id="app">
     <div v-for="item in items" :key="item.id" v-if="item.isActive">
+      {{ item.name }}
+    </div>
+  </div> -->
+
+  <!-- 避免渲染应该被隐藏的列表 -->
+  <div id="app">
+    <div v-for="item of items" :key="item.id" v-if="shouldShowUsers">
       {{ item.name }}
     </div>
   </div>
@@ -19,6 +27,7 @@
     const app = Vue.createApp({
       data() {
         return {
+          shouldShowUsers: true,
           items: [
             { id: 1, name: '张三', isActive: true },
             { id: 2, name: '李四', isActive: false }
@@ -26,7 +35,7 @@
         }
       },
     }).mount('#app')
-    console.log(app.$options.render);   
+    console.log(app.$options.render);
   </script>
 </body>
 
