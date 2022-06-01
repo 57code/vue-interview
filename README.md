@@ -1,8 +1,8 @@
 # vue-interview
-总结面试中经典的vue相关题目，分析最佳回答策略，欢迎star，你的支持是我最大的动力
+总结面试中经典的vue相关题目，分析最佳回答策略，期待您的`star`，您的支持是我坚持的最大的动力
 
 ## 面试群
-关注村长，回复“加群”，加入面试群一起卷~
+关注`村长学前端`，回复“加群”，加入面试群一起卷~
 <img src="https://gitee.com/57code/picgo/raw/master/image-20220210162539024.png" alt="i4" style="zoom:50%;" />
 
 ## 视频讲解
@@ -28,13 +28,12 @@
 16. [说一下父组件和子组件创建和挂载顺序](public/16-create-mount/README.md)
 17. [vue组件为什么只能有一个根元素?](public/15-watch-computed/README.md)
 18. [你都知道哪些Vue3.0的新特性？](public/18-v3-feature/README.md)
-19. data选项为什么必须是个函数？
-20. [简述 Vue 的生命周期以及每个阶段做的事](public/20-lifecycle/README.md)
-21. [说说你对虚拟 DOM 的理解？](public/21-vdom/README.md)
-22. [怎么缓存当前的组件？](public/22-cache-comp/README.md)
-23. [说说从 template 到 render 处理过程](public/23-template-render/README.md)
-24. [如果让你从零写一个vue路由，说说你的思路](public/24-router/README.md)
-
+19. [简述 Vue 的生命周期以及每个阶段做的事](public/19-lifecycle/README.md)
+20. [说说你对虚拟 DOM 的理解？](public/20-vdom/README.md)
+21. [怎么缓存当前的组件？](public/21-cache-comp/README.md)
+22. [说说从 template 到 render 处理过程](public/22-template-render/README.md)
+23. [如果让你从零写一个vue路由，说说你的思路](public/14-router/README.md)
+24. [Vue 3.0的设计目标是什么？做了哪些优化?](public/24-v3-design/README.md)
 
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答
