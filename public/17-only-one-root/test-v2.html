@@ -1,0 +1,17 @@
+<div id="app">
+  <comp></comp>
+</div>
+
+<script src="http://unpkg.com/vue@2"></script>
+<script>
+  new Vue({
+    components: {
+      comp: {
+        template: `
+          <div>root1</div>
+          <div>root2</div>
+        `
+      }
+    }
+  }).$mount('#app')
+</script>
