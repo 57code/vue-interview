@@ -34,6 +34,19 @@
 22. [说说从 template 到 render 处理过程](public/22-template-render/README.md)
 23. [如果让你从零写一个vue路由，说说你的思路](public/14-router/README.md)
 24. [Vue 3.0的设计目标是什么？做了哪些优化?](public/24-v3-design/README.md)
+25. [你了解哪些Vue性能优化方法？](public/25-performance/README.md)
+26. [Vue组件为什么只能有一个根元素?](public/26-one-root/README.md)
+27. [你有使用过vuex的module吗？](public/27-vuex-module/README.md)
+28. [怎么实现路由懒加载呢？](public/28-route-lazy-load/README.md)
+29. [ref和reactive异同](public/29-ref-reactive/README.md)
+30. [watch和watchEffect异同](public/30-watch-watchEffect/README.md)
+31. [SPA、SSR的区别是什么](public/31-SPA-SSR/README.md)
+32. [你写过自定义指令吗？使用场景有哪些？](public/32-directive/README.md)
+33. [说下\$attrs和$listeners的使用场景](public/33-%24attrs/README.md)
+34. [v-once的使用场景有哪些？](public/34-v-once/README.md)
+35. [什么是递归组件？举个例子说明下？](public/35-recursive-component/README.md)
+36. [异步组件是什么？使用场景有哪些？](public/36-async-component/README.md)
+37. [你是怎么处理vue项目中的错误的？](public/37-error-handle/README.md)
 
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答
