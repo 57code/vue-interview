@@ -53,6 +53,7 @@
 41. [实际工作中，你总结的vue最佳实践有哪些？](public/40-create-vue-proj/README.md)
 42. [Vue实例挂载的过程中发生了什么?](public/42-instance-mount/README.md)
 43. [vue-loader是什么？它有什么作用？](public/43-vue-loader/README.md)
+44. [如何获取动态路由并获取其参数？](public/44-dynamic-route/README.md)
 
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答
