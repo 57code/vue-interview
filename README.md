@@ -47,6 +47,6 @@
 35. [什么是递归组件？举个例子说明下？](public/35-recursive-component/README.md)
 36. [异步组件是什么？使用场景有哪些？](public/36-async-component/README.md)
 37. [你是怎么处理vue项目中的错误的？](public/37-error-handle/README.md)
-
+38. [子组件能修改父组件数据吗？](public/38-child-modify-parent/README.md)
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答
