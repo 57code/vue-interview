@@ -48,5 +48,6 @@
 36. [异步组件是什么？使用场景有哪些？](public/36-async-component/README.md)
 37. [你是怎么处理vue项目中的错误的？](public/37-error-handle/README.md)
 38. [子组件能修改父组件数据吗？](public/38-child-modify-parent/README.md)
+39. [Vue要做权限管理该怎么做？控制到按钮级别的权限怎么做？](public/39-permission/README.md)
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答
