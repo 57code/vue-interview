@@ -51,5 +51,7 @@
 39. [Vue要做权限管理该怎么做？控制到按钮级别的权限怎么做？](public/39-permission/README.md)
 40. [从0到1自己构架一个vue项目，说说有哪些步骤、哪些重要插件、目录结构你会怎么组织](public/40-create-vue-proj/README.md)
 41. [实际工作中，你总结的vue最佳实践有哪些？](public/40-create-vue-proj/README.md)
+42. [Vue实例挂载的过程中发生了什么?](public/42-instance-mount/README.md)
+
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答
