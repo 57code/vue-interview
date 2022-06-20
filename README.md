@@ -54,6 +54,11 @@
 42. [Vue实例挂载的过程中发生了什么?](public/42-instance-mount/README.md)
 43. [vue-loader是什么？它有什么作用？](public/43-vue-loader/README.md)
 44. [如何获取动态路由并获取其参数？](public/44-dynamic-route/README.md)
+45. [如果让你从零开始写一个vuex，说说你的思路](public/45-vuex-design/README.md)
+46. [vuex中actions和mutations有什么区别？](public/46-mutations-actions/README.md)
+47. [使用vue渲染大量数据时应该怎么优化？说下你的思路！](public/47-big-data-performance/README.md)
+48. [怎么监听vuex数据的变化？](public/48-watch-vuex-state/README.md)
+49. [router-link和router-view是如何起作用的？](public/49-router-link-router-view/README.md)
 
 ### 欢迎把你想听的题目以issue的方式提给我
 ### 欢迎你加入村长的项目已pr形式提交题目和解答

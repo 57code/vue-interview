@@ -1,0 +1,27 @@
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const { reactive } = Vue
+  class Store {
+    constructor(options) {
+      this.state = reactive(options.state)
+      this.options = options
+    }
+    commit(type, payload) {
+      this.options.mutations[type].call(this, this.state, payload)
+    }
+  }
+
+  const store = new Store({
+    state: {
+      username: 'tom'
+    },
+    mutations: {
+      SET_USERNAME(state, payload) {
+        state.username = payload
+      }
+    }
+  })
+  console.log(store.state.username);
+  store.commit('SET_USERNAME', 'jerry')
+  console.log(store.state.username);
+</script>

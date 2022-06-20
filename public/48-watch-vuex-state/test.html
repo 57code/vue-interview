@@ -1,0 +1,36 @@
+<div id="app">{{$store.state.counter}}</div>
+
+<script src="http://unpkg.com/vue@3"></script>
+<script src="http://unpkg.com/vuex@4"></script>
+<script>
+  const { createApp } = Vue
+  const { createStore } = Vuex
+  const app = createApp({
+    mounted() {
+      setInterval(() => {
+        this.$store.commit('add')
+      }, 1000);
+    },
+    watch: {
+      '$store.state.counter'() {
+        console.log('counter change!');
+      }
+    }
+  })
+  const store = createStore({
+    state: {
+      counter: 1
+    },
+    mutations: {
+      add(state) {
+        state.counter++
+      }
+    }
+  })
+  store.subscribe((mutation, state) => {
+    if (mutation.type === 'add') {
+      console.log('counter change in subscribe()!');
+    }
+  })
+  app.use(store).mount('#app')
+</script>
