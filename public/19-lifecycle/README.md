@@ -30,7 +30,7 @@
 | mounted       | mounted             | 组件挂载到实例上去之后                   |
 | beforeUpdate  | beforeUpdate        | 组件数据发生变化，更新之前               |
 | updated       | updated             | 数据数据更新之后                         |
-| beforeDestroy | **beforeUnmounted** | 组件实例销毁之前                         |
+| beforeDestroy | **beforeUnmount** | 组件实例销毁之前                         |
 | destroyed     | **unmounted**       | 组件实例销毁之后                         |
 | activated     | activated           | keep-alive 缓存的组件激活时              |
 | deactivated   | deactivated         | keep-alive 缓存的组件停用时调用          |
@@ -57,7 +57,7 @@
 
 **updated**：完成`view`层的更新，更新后，所有状态已是最新
 
-**beforeunmounted**：实例被销毁前调用，可用于一些定时器或订阅的取消
+**beforeUnmount**：实例被销毁前调用，可用于一些定时器或订阅的取消
 
 **unmounted**：销毁一个实例。可清理它与其它实例的连接，解绑它的全部指令及事件监听器
 
