@@ -1,0 +1,10 @@
+@import '_variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
