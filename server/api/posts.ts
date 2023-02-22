@@ -6,6 +6,12 @@ import matter from 'gray-matter';
 const postsDir = path.join(process.cwd(), "content");
 
 export default defineEventHandler((event) => {
+
+  // 获取页码
+  const query = getQuery(event)
+  const page = Number(query.page)
+  const size = Number(query.size) || 1
+  
   const fileNames = fs.readdirSync(postsDir);
   const posts = fileNames.map((fileName) => {
     // 获取文件名作为文章标题
@@ -24,5 +30,9 @@ export default defineEventHandler((event) => {
     };
   });
   // 降序排列
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+  const start = (page - 1) * size
+  const end = start + size
+  return posts
+    .sort((a, b) => (a.date < b.date ? 1 : -1))
+    .slice(start, end);
 });
