@@ -1,7 +1,8 @@
 <template><!-- <h1>Detail Page</h1> -->
   <!-- <p>{{ $route.params.id }}</p> -->
   <div class="p-5">
-    <div v-if="pending">加载中...</div>
+    <div v-if="error">{{ errorMsg }}</div>
+    <div v-else-if="pending">加载中...</div>
     <div v-else>
       <h1>{{ data?.title }}</h1>
       <div v-html="data?.content"></div>
@@ -18,12 +19,19 @@
   </div>
 </template>
 <script setup lang="ts">
+import { NuxtError } from '#app'
 // 获取文章id
 const route = useRoute()
 // const { title, content } = await $fetch(`/api/detail/${route.params.id}`)
 const fetchPost = () => $fetch(`/api/detail/${route.params.id}`)
-const { data, pending } = await useAsyncData(fetchPost)
-
+const { data, pending, error } = await useAsyncData(fetchPost)
+const errorMsg = computed(() => error.value as NuxtError)
+watchEffect(() => {
+  if (unref(error)) {
+    // 如果有错误对象，则展示错误页
+    showError(errorMsg.value)
+  }
+})
 // 请求体
 // $fetch('/api/detail/', {
 //   body: {
@@ -45,6 +53,7 @@ const onSubmit = () => {
     router.push('/login?callback=' + route.path)
   }
 }
+
 </script>
 <style scoped lang="scss">
 p {
