@@ -10,7 +10,13 @@
   "devDependencies": {
     "@huntersofbook/naive-ui-nuxt": "^0.6.0",
     "@nuxtjs/tailwindcss": "^6.4.1",
+    "@types/node": "^18.14.0",
     "nuxt": "^3.2.2",
     "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.2"
   }
 }
