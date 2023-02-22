@@ -28,6 +28,12 @@
 </template>
 
 <script setup lang="ts">
+
+// 配置标题
+useHead({
+  title: '文章列表'
+})
+
 // const posts = await $fetch("/api/posts");
 const page = ref(1)
 const { data: posts, pending, error, refresh } = await useFetch(

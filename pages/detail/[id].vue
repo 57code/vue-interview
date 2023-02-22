@@ -20,8 +20,13 @@
 </template>
 <script setup lang="ts">
 import { NuxtError } from '#app'
-// 获取文章id
+
 const route = useRoute()
+useHead({
+  title: route.params.id as string
+})
+
+// 获取文章id
 // const { title, content } = await $fetch(`/api/detail/${route.params.id}`)
 const fetchPost = () => $fetch(`/api/detail/${route.params.id}`)
 const { data, pending, error } = await useAsyncData(fetchPost)
