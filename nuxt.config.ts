@@ -2,6 +2,16 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    '@huntersofbook/naive-ui-nuxt'
+    '@huntersofbook/naive-ui-nuxt',
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: [
+          // 自动引入 `defineStore(), storeToRefs()`
+          "defineStore",
+          "storeToRefs"
+        ],
+      },
+    ]
   ]
 })
