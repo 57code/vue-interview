@@ -1,0 +1,1 @@
+import{o as t,a as o,e as a,F as n,b as c,N as s}from"./entry.f6939452.js";import{_}from"./_plugin-vue_export-helper.c27b6911.js";const r={},l=c("h1",null,"Detail Page",-1);function m(d,f){const e=s;return t(),o(n,null,[l,a(e)],64)}const u=_(r,[["render",m]]);export{u as default};

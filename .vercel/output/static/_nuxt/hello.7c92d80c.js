@@ -1,0 +1,1 @@
+import{d as n,J as s,o,a as r,t as c,n as l}from"./entry.f6939452.js";const f=n({__name:"hello",async setup(_){let e,t;const{message:a}=([e,t]=s(()=>$fetch("/api/hello")),e=await e,t(),e);return(p,i)=>(o(),r("div",null,c(l(a)),1))}});export{f as default};
